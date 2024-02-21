@@ -1,0 +1,36 @@
+﻿@model EntityLayer.Concrete.Image
+
+@{
+    ViewData["Title"] = "EditImage";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+
+
+<center>
+    <h1>Görsel Düzenleme Sayfası</h1>
+</center>
+
+<form method="post">
+    <div class="form-group">
+        @Html.HiddenFor(x => x.ImageID)
+        @Html.Label("Başlık")
+        <input type="text" asp-for="Title" class="form-control" />
+        <span asp-validation-for="Title" class="text-danger"></span>
+    </div>
+    <br />
+    <div class="form-group">
+        @Html.Label("Açıklama")
+        <input type="text" asp-for="Description" class="form-control" />
+        <span asp-validation-for="Description" class="text-danger"></span>
+    </div>
+    <br />
+    <div class="form-group">
+        @Html.Label("URL")
+        <input type="text" asp-for="ImageUrl" class="form-control" />
+        <span asp-validation-for="ImageUrl" class="text-danger"></span>
+    </div>
+    <br />
+    <button class="btn btn-outline-info">Değişiklikleri Kaydet</button>
+</form>
+

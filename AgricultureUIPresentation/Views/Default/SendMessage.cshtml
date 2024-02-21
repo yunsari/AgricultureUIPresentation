@@ -1,0 +1,20 @@
+﻿@model EntityLayer.Concrete.Contact
+
+<div class="col-md-9 contact-middle">
+    <h2>Bize Yazın</h2>
+    @using (Html.BeginForm("SendMessage", "Default", FormMethod.Post))
+    {
+        <div class="form-agileinfo">
+            <p>Ad Soyad</p>
+            <input type="text" asp-for="Name" placeholder="Ad Soyad" required="" />
+            <p>E-Posta</p>
+            <input type="email" asp-for="Mail" placeholder="E-Posta" required="" />
+            <p>Konu</p>
+            <input type="text" asp-for="MessageTitle" placeholder="Konu" required="" />
+            <p>Mesaj</p>
+            <input type="text" asp-for="Message" placeholder="Mesajınızı yazın.." required="" />
+            <input type="submit" value="GÖNDER" />
+        </div>
+        <div class="clearfix"></div>
+    }
+</div>

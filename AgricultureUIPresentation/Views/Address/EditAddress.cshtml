@@ -1,0 +1,38 @@
+﻿@model EntityLayer.Concrete.Address
+
+@{
+    ViewData["Title"] = "EditAddress";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<center>
+    <h1>Adres Güncelleme Sayfası</h1>
+</center>
+
+<form method="post">
+    <div class="form-group">
+        @Html.HiddenFor(x => x.AddressID)
+        @Html.Label("Açıklama 1")
+        <input type="text" asp-for="Desc1" class="form-control" />
+        <span asp-validation-for="Desc1" class="text-danger"></span>
+        <br />
+        @Html.Label("Açıklama 2")
+        <input type="text" asp-for="Desc2" class="form-control" />
+        <span asp-validation-for="Desc2" class="text-danger"></span>
+        <br />
+        @Html.Label("Açıklama 3")
+        <input type="text" asp-for="Desc3" class="form-control" />
+        <span asp-validation-for="Desc3" class="text-danger"></span>
+        <br />
+        @Html.Label("Açıklama 4")
+        <input type="text" asp-for="Desc4" class="form-control" />
+        <span asp-validation-for="Desc4" class="text-danger"></span>
+        <br />
+        @Html.Label("Harita")
+        <input type="text" asp-for="MapInfo" class="form-control" />
+        <span asp-validation-for="MapInfo" class="text-danger"></span>
+    </div>
+    <br />
+    <button class="btn btn-outline-info">Adresi Güncelle</button>
+</form>
+

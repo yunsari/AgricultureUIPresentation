@@ -1,0 +1,52 @@
+﻿@model EntityLayer.Concrete.Team
+@{
+    ViewData["Title"] = "EditTeam";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<center>
+    <h1>Personel Güncelleme Sayfası</h1>
+</center>
+
+<form method="post">
+    <div class="form-group">
+        @Html.HiddenFor(x => x.TeamID)
+        @Html.Label("Ad Soyad")
+        <input type="text" asp-for="PersonName" class="form-control" />
+        <span asp-validation-for="PersonName" class="text-danger"></span>
+    </div>
+    <br />
+    <div class="form-group">
+        @Html.Label("Görev")
+        <input type="text" asp-for="Title" class="form-control" />
+        <span asp-validation-for="Title" class="text-danger"></span>
+    </div>
+    <br />
+    <div class="form-group">
+        @Html.Label("Görsel")
+        <input type="text" asp-for="ImagerUrl" class="form-control" />
+        <span asp-validation-for="ImagerUrl" class="text-danger"></span>
+    </div>
+    <br />
+    <div class="form-group">
+        @Html.Label("Facebook")
+        <input type="text" asp-for="FacebookUrl" class="form-control" />
+    </div>
+    <br />
+    <div class="form-group">
+        @Html.Label("Instagram")
+        <input type="text" asp-for="InstagramUrl" class="form-control" />
+    </div>
+    <br />
+    <div class="form-group">
+        @Html.Label("Twitter")
+        <input type="text" asp-for="TwitterUrl" class="form-control" />
+    </div>
+    <br />
+    <div class="form-group">
+        @Html.Label("Web Sitesi")
+        <input type="text" asp-for="WebsiteUrl" class="form-control" />
+    </div>
+    <br />
+    <button class="btn btn-outline-info">Pesonel Bilgisi Güncelle</button>
+</form>

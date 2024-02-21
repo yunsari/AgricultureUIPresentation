@@ -1,0 +1,40 @@
+﻿@model EntityLayer.Concrete.Announcement
+
+@{
+    ViewData["Title"] = "AddAnnouncement";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+
+<center>
+    <h1>Yeni Duyuru Girişi</h1>
+</center>
+
+<form method="post">
+    <div class="form-group">
+        @Html.Label("Başlık")
+        <input type="text" asp-for="Title" class="form-control" />
+        <span asp-validation-for="Title" class="text-danger"></span>
+    </div>
+    <br />
+    <div class="form-group">
+        @Html.Label("Tarih")
+        <input type="text" asp-for="Date" class="form-control" />
+        <span asp-validation-for="Date" class="text-danger"></span>
+    </div>
+    <br />
+    <div class="form-group">
+        @Html.Label("Açıklama")
+        <input type="text" asp-for="Description" class="form-control" />
+        <span asp-validation-for="Description" class="text-danger"></span>
+    </div>
+    <br />
+    <div class="form-group">
+        @Html.Label("Durum")
+        <input type="text" asp-for="Status" class="form-control" />
+        <span asp-validation-for="Status" class="text-danger"></span>
+    </div>
+    <br />
+    <button class="btn btn-outline-info">Kaydet</button>
+</form>
+

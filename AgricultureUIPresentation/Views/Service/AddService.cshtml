@@ -1,0 +1,38 @@
+﻿@model AgricultureUIPresentation.Models.ServiceAddViewModel
+@{
+    ViewData["Title"] = "AddService";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<center>
+    <h1>Yeni Hizmet Girişi</h1>
+</center>
+
+<form method="post">
+    <div class="form-group">
+        @Html.Label("Başlık")
+        <input type="text" asp-for="Title" class="form-control"/>
+    </div>
+    <br />
+    <div class="form-group">
+        @Html.Label("Görsel")
+        <input type="text" asp-for="Image" class="form-control" />
+    </div>
+    <br />
+    <div class="form-group">
+        @Html.Label("Açıklama")
+        <input type="text" asp-for="Description" class="form-control" />
+    </div>
+    <br />
+    <div class="form-group">
+        @Html.Label("Renk")
+        <input type="text" asp-for="Color" class="form-control" />
+    </div>
+    <br />
+    <div class="form-group">
+        @Html.Label("Sınıf")
+        <input type="text" asp-for="Class" class="form-control" />
+    </div>
+    <br />
+    <button class="btn btn-outline-info">Kaydet</button>
+</form>

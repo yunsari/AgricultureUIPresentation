@@ -1,0 +1,27 @@
+﻿@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+
+<body>
+
+    @await Component.InvokeAsync("_DashboardNavbarPartial")
+
+    @await Component.InvokeAsync("_DashboardOverviewPartial")
+
+    @await Component.InvokeAsync("_DashboardChartPartial")
+
+    @await Component.InvokeAsync("_DashboardTablePartial")
+
+
+</body>
+
+<script>
+
+    history.pushState(null, null, location.href);
+    window.onpopstate = function () {
+        history.go(1);
+    };
+
+</script>
